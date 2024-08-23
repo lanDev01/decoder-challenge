@@ -16,7 +16,7 @@
       <main>
         <div class="content-left">
           <div class="box-center">
-            <textarea name="" id="" placeholder="Digite seu texto"></textarea>
+            <textarea name="" id="textoDescriptografado" class="text-area" placeholder="Digite seu texto"></textarea>
 
             <div class="box-buttons">
               <p>
@@ -25,15 +25,15 @@
               </p>
 
               <div class="buttons-wrapper">
-                <button class="coder">Criptografar</button>
-                <button class="decoder">Descriptografar</button>
+                <button class="coder" onclick="criptografar()">Criptografar</button>
+                <button class="decoder" onclick="descriptografar()">Descriptografar</button>
               </div>
             </div>
           </div>
         </div>
 
         <div class="content-right">
-          <div class="box-not-found">
+          <div class="box-not-found wrapper-message" id="semMensagem">
             <img src="./assets/high-quality-products.svg" alt="" />
 
             <h2>Nenhuma mensagem encontrada</h2>
@@ -44,18 +44,17 @@
             </p>
           </div>
 
-          <div class="box-decoder">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
-              reprehenderit nostrum libero consequatur animi quisquam repellat
-              molestiae ad eos eum eius, deleniti tenetur voluptate. Autem
-              laudantium tenetur minima asperiores. Nulla?
+          <div id="textoTradutor" style="display: none;" class="box-decoder wrapper-message">
+            <p id="message">
+              
             </p>
 
-            <button>Copiar</button>
+            <button id="button-copy" onclick="copiar()">Copiar</button>
           </div>
         </div>
       </main>
     </section>
   </body>
+
+  <script src="./script.js"></script>
 </html>
